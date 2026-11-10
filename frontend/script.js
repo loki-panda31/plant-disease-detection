@@ -75,7 +75,9 @@ const topPredictions =
 // ============================================================
 
 const API_URL =
-    "https://tomato-guard-ai-eqzo.onrender.com";
+    (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || !window.location.hostname)
+        ? "http://127.0.0.1:5000"
+        : "https://tomato-guard-ai-eqzo.onrender.com";
 
 // ============================================================
 // SELECTED FILE
